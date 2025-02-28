@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP-Kamera Live-Ansicht</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .video-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Hält das Seitenverhältnis bei und zentriert das Bild */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="video-wrapper">
+            <img src="https://vcdn.bergfex.at/webcams/archive.new/downsized/5/8805/2025/02/28/8805_2025-02-28_1845_688d47e0ed941b8b.jpg" alt="Live-Bild">
+        </div>
+        <div class="video-wrapper">
+            <img src="https://vcdn.bergfex.at/webcams/archive.new/downsized/4/8804/2025/02/28/8804_2025-02-28_1845_688d47e0ed941b8b.jpg" alt="Live-Bild">
+        </div>
+        <div class="video-wrapper">
+            <img src="https://images-webcams.windy.com/63/1388482563/current/full/1388482563.jpg" alt="Live-Bild">
+        </div>
+    </div>
+
+</body>
+</html>
+
+ <!-- CHAT: https://chatgpt.com/c/67c231de-effc-800b-87b1-006c2a3fe76e -->

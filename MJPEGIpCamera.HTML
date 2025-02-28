@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP-Kamera Live-Ansicht</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .video-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Zentriert das Bild */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="video-wrapper">
+            <video src="http://palladiumjamaica.axiscam.net:51233/mjpg/video.mjpg?resolution=640x480" autoplay loop muted></video>
+        </div>
+        <div class="video-wrapper">
+            <video src="http://201.134.241.4/mjpg/video.mjpg?resolution=704x480" autoplay loop muted></video>
+        </div>
+        <div class="video-wrapper">
+            <video src="http://200.36.58.250/mjpg/video.mjpg?resolution=640x480" autoplay loop muted></video>
+        </div>
+    </div>
+
+</body>
+</html>
